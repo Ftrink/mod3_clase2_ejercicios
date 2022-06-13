@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Auto{
+        constructor (marca, modelo, año_fabricacion, cant_puertas){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.año_fabricacion = año_fabricacion;
+            this.cant_puertas = cant_puertas;
+        }
+
+        //metodos
+        acelerar(){
+            console.log('Acelerandoo ... ')
+        };
+        subirVidrios(){
+            console.log('Subiendo vidrios')
+        };
+        }
+
+        let aut1 = new auto('nissan', 'dlx1', '2000','2'); 
+        let aut2 = new autoGas('nissan', 'dlx1', '2000','2');
+        let aut3 = new autoNafta('nissan', 'dlx1', '2000','2');
+        let aut4 = new autoElectrico('nissan', 'dlx1', '2000','2');
+        
+        class autoGas extends Auto{
+            acelerar(){
+                consle.log('Acelerando a gas')
+            }
+        }
+        class autoNafta extends Auto{
+            /*constructor(acelera_a_nafta)      <== Esto no es necesario ==>
+            //constructor clase madre  //
+            super(marca, modelo, año_fabricacion, cant_puertas)
+            //this.acelera_a_gas = acelera_a_gas;*/
+            acelerar(){
+                consle.log('Acelerando a bencina')
+            }
+        }
+        class autoElectrico extends Auto{          
+            acelerar(){
+                consle.log('Acelerando a electricidad')
+                }
+            }        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
